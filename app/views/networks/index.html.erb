@@ -1,0 +1,30 @@
+<h1>Listing networks</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @networks.each do |network| %>
+  <tr>
+		<td><strong><%= network.name %></strong></td>
+		<td><%= network.description %></td>
+    <td><%= link_to 'Show', network %></td>
+    <td><%= link_to 'Edit', edit_network_path(network) %></td>
+    <td><%= link_to 'Destroy', network, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New network', new_network_path %>
+
+<% if logged_in? %>
+	<p><strong>You are logged in as <%= h current_user.login %> </strong> <%= link_to 'Logout', logout_path %></p>
+<% else %>
+	<p>
+		<%= link_to 'Login', login_path %>
+		<%= link_to 'Signup', signup_path %>
+	</p>
+<% end %>
+		
