@@ -1,24 +1,23 @@
-<div id="main">
-	<h1>Editing network</h1>
 
-	<% form_for(@network) do |f| %>
-	  <%= f.error_messages %>
+<h1>Editing network</h1>
 
-		<p>
-			<%= f.label :name %> <br />
-			<%= f.text_field :name %>
-		</p>
+<% form_for(@network) do |f| %>
+  <%= f.error_messages %>
 
-		<p>
-			<%= f.label :description %> <br />
-			<%= f.text_field :description %>
-		</p>
+	<p>
+		<%= f.label :name %> <br />
+		<%= f.text_field :name %>
+	</p>
 
-	  <p>
-	    <%= f.submit 'Update' %>
-	  </p>
-	<% end %>
+	<p>
+		<%= f.label :description %> <br />
+		<%= f.text_field :description %>
+	</p>
 
-	<%= link_to 'Show', @network %> |
-	<%= link_to 'Back', networks_path %>
-</div>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @network %> |
+<%= link_to 'Back', networks_path %>

@@ -5,15 +5,16 @@
 <% @networks.each do |network| %>
   <tr>
 		<td class="title">
-			<strong>
-				<%= link_to (network.name ? network.name : ""), network_path(:id => network.id) %>  -  
-				<%= (network.description ? network.description : "")%> -
-			</strong>
+			<strong><%= link_to (network.name ? network.name : ""), network_path(:id => network.id) %> </strong> <br />
+			<%= (network.description ? network.description : "")%>
+
 			
-			<% if current_user.member?(network) %>
-				<%= link_to 'Unjoin', unjoin_path(:network_id => network.id, :user_id => current_user.id) %> 	
-			<% else %>
-				<%= link_to 'Join', join_path(:network_id => network.id, :user_id => current_user.id) %>
+			<% if current_user %>
+				<% if current_user.member?(network) %>
+					<%= link_to 'Unjoin', unjoin_path(:network_id => network.id, :user_id => current_user.id) %> 	
+				<% else %>
+					<%= link_to 'Join', join_path(:network_id => network.id, :user_id => current_user.id) %>
+				<% end %>
 			<% end %>
 		</td>
     <td class="links">

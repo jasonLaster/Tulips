@@ -5377,3 +5377,623 @@ Rendering networks/show
   [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
 Rendered shared/_header (1.6ms)
 Completed in 81ms (View: 73, DB: 1) | 200 OK [http://localhost/networks/3]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 10:37:07) [GET]
+  [4;36;1mNetwork Load (0.7ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/networks
+Rendering networks/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.member?) on line #13 of app/views/networks/index.html.erb:
+10: 				<%= (network.description ? network.description : "")%> -
+11: 			</strong>
+12: 			
+13: 			<% if current_user.member?(network) %>
+14: 				<%= link_to 'Unjoin', unjoin_path(:network_id => network.id, :user_id => current_user.id) %> 	
+15: 			<% else %>
+16: 				<%= link_to 'Join', join_path(:network_id => network.id, :user_id => current_user.id) %>
+
+    app/views/networks/index.html.erb:13
+    app/views/networks/index.html.erb:5:in `each'
+    app/views/networks/index.html.erb:5
+
+Rendered rescues/_trace (121.3ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNetworks (20100725023812)
+Migrating to CreateUsers (20100725025640)
+Migrating to CreateMemberships (20100725184606)
+Migrating to CreateArticles (20100725225910)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("memberships")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("networks")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_users_on_login')[0m
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 10:37:33) [GET]
+  [4;35;1mNetwork Load (0.7ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/networks
+Rendering networks/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.member?) on line #13 of app/views/networks/index.html.erb:
+10: 				<%= (network.description ? network.description : "")%> -
+11: 			</strong>
+12: 			
+13: 			<% if current_user.member?(network) %>
+14: 				<%= link_to 'Unjoin', unjoin_path(:network_id => network.id, :user_id => current_user.id) %> 	
+15: 			<% else %>
+16: 				<%= link_to 'Join', join_path(:network_id => network.id, :user_id => current_user.id) %>
+
+    app/views/networks/index.html.erb:13
+    app/views/networks/index.html.erb:5:in `each'
+    app/views/networks/index.html.erb:5
+
+Rendered rescues/_trace (121.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 10:38:19) [GET]
+  [4;36;1mNetwork Load (0.6ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/networks
+Rendering networks/index
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #16 of app/views/networks/index.html.erb:
+13: 			<% if current_user && current_user.member?(network) %>
+14: 				<%= link_to 'Unjoin', unjoin_path(:network_id => network.id, :user_id => current_user.id) %> 	
+15: 			<% else %>
+16: 				<%= link_to 'Join', join_path(:network_id => network.id, :user_id => current_user.id) %>
+17: 			<% end %>
+18: 		</td>
+19:     <td class="links">
+
+    app/views/networks/index.html.erb:16
+    app/views/networks/index.html.erb:5:in `each'
+    app/views/networks/index.html.erb:5
+
+Rendered rescues/_trace (48.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 10:39:23) [GET]
+  [4;35;1mNetwork Load (0.6ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/networks
+Rendering networks/index
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 10:40:56) [GET]
+  [4;36;1mNetwork Load (0.6ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (1.3ms)
+Completed in 32ms (View: 25, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-26 10:41:04) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mNetwork Load (0.3ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 3) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+Rendered shared/_header (0.6ms)
+Completed in 91ms (View: 13, DB: 1) | 200 OK [http://localhost/networks/3]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 10:51:52) [GET]
+  [4;35;1mNetwork Load (0.6ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.3ms)
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing NetworksController#edit (for 127.0.0.1 at 2010-07-26 10:52:18) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering networks/edit
+Rendered shared/_header (0.4ms)
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://localhost/networks/6/edit]
+
+
+Processing NetworksController#update (for 127.0.0.1 at 2010-07-26 10:53:57) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"YQRy7xoMr5VDhdgu05EpKhhF1Wj10yfdRxexqRRlm1A=", "id"=>"6", "network"=>{"name"=>"NGOS Sustainable Innovation", "description"=>"Community of like-minded individuals interested in making a difference."}}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = 6) [0m
+  [4;36;1mNetwork Update (0.4ms)[0m   [0;1mUPDATE "networks" SET "updated_at" = '2010-07-26 17:53:57', "name" = 'NGOS Sustainable Innovation', "description" = 'Community of like-minded individuals interested in making a difference.' WHERE "id" = 6[0m
+Redirected to http://localhost:3000/networks/6
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/networks/6]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-26 10:53:57) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 6) [0m
+Rendered shared/_header (0.6ms)
+Completed in 14ms (View: 3, DB: 0) | 200 OK [http://localhost/networks/6]
+
+
+Processing NetworksController#update (for 127.0.0.1 at 2010-07-26 10:54:07) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"YQRy7xoMr5VDhdgu05EpKhhF1Wj10yfdRxexqRRlm1A=", "id"=>"6", "network"=>{"name"=>"NGOS 4 Sustainable Innovation", "description"=>"Community of like-minded individuals interested in making a difference."}}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = 6) [0m
+  [4;36;1mNetwork Update (0.5ms)[0m   [0;1mUPDATE "networks" SET "updated_at" = '2010-07-26 17:54:07', "name" = 'NGOS 4 Sustainable Innovation' WHERE "id" = 6[0m
+Redirected to http://localhost:3000/networks/6
+Completed in 22ms (DB: 1) | 302 Found [http://localhost/networks/6]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-26 10:54:07) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 6) [0m
+Rendered shared/_header (0.7ms)
+Completed in 75ms (View: 66, DB: 0) | 200 OK [http://localhost/networks/6]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 10:54:10) [GET]
+  [4;35;1mNetwork Load (0.6ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.4ms)
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 10:54:48) [GET]
+  [4;36;1mNetwork Load (0.6ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.3ms)
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 10:55:22) [GET]
+  [4;35;1mNetwork Load (0.7ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.4ms)
+Completed in 90ms (View: 84, DB: 1) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 10:55:24) [GET]
+  [4;36;1mNetwork Load (0.6ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.9ms)
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 10:55:37) [GET]
+  [4;35;1mNetwork Load (0.6ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.3ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 10:57:01) [GET]
+  [4;36;1mNetwork Load (0.6ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.4ms)
+Completed in 95ms (View: 89, DB: 1) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 10:57:14) [GET]
+  [4;35;1mNetwork Load (0.6ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.4ms)
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#members (for 127.0.0.1 at 2010-07-26 11:01:30) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering networks/members
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "memberships" ON "users".id = "memberships".user_id WHERE (("memberships".network_id = 3)) [0m
+Rendered shared/_header (0.6ms)
+Completed in 18ms (View: 9, DB: 1) | 200 OK [http://localhost/networks/members?id=3]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 11:09:01) [GET]
+  [4;36;1mNetwork Load (0.6ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.4ms)
+Completed in 84ms (View: 12, DB: 1) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 11:09:37) [GET]
+  [4;35;1mNetwork Load (0.7ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.4ms)
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 11:09:44) [GET]
+  [4;36;1mNetwork Load (0.6ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.3ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 11:11:24) [GET]
+  [4;35;1mNetwork Load (0.6ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.4ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 11:11:33) [GET]
+  [4;36;1mNetwork Load (0.6ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.4ms)
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 11:23:34) [GET]
+  [4;35;1mNetwork Load (0.9ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.4ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing NetworksController#edit (for 127.0.0.1 at 2010-07-26 11:24:35) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering networks/edit
+Rendered shared/_header (0.4ms)
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/networks/7/edit]
+
+
+Processing NetworksController#update (for 127.0.0.1 at 2010-07-26 11:24:50) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"YQRy7xoMr5VDhdgu05EpKhhF1Wj10yfdRxexqRRlm1A=", "id"=>"7", "network"=>{"name"=>"Economic Forum", "description"=>"Paul Krugrman meets Paul Graham"}}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = 7) [0m
+  [4;36;1mNetwork Update (0.4ms)[0m   [0;1mUPDATE "networks" SET "updated_at" = '2010-07-26 18:24:50', "name" = 'Economic Forum' WHERE "id" = 7[0m
+Redirected to http://localhost:3000/networks/7
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/networks/7]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-26 11:24:50) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 7) [0m
+Rendered shared/_header (1.0ms)
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://localhost/networks/7]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 11:24:54) [GET]
+  [4;35;1mNetwork Load (0.6ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.3ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 12:53:21) [GET]
+  [4;36;1mNetwork Load (0.6ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.3ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-26 12:53:24) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 3) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+Rendered shared/_header (0.6ms)
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://localhost/networks/3]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-26 12:53:33) [GET]
+
+ActionController::RoutingError (No route matches "/networks/3/article/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-07-26 12:53:48) [GET]
+  Parameters: {"network_id"=>"3"}
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/articles_controller.rb:19:in `new'
+
+Rendered rescues/_trace (102.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-07-26 12:54:52) [GET]
+  Parameters: {"network_id"=>"3"}
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/articles_controller.rb:19:in `new'
+
+Rendered rescues/_trace (37.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-07-26 12:54:53) [GET]
+  Parameters: {"network_id"=>"3"}
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/articles_controller.rb:19:in `new'
+
+Rendered rescues/_trace (36.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-07-26 12:55:49) [GET]
+  Parameters: {"network_id"=>"3"}
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/articles_controller.rb:19:in `new'
+
+Rendered rescues/_trace (102.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-07-26 12:55:49) [GET]
+  Parameters: {"network_id"=>"3"}
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/articles_controller.rb:19:in `new'
+
+Rendered rescues/_trace (35.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-26 12:56:03) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_header (0.4ms)
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-26 12:56:13) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"YQRy7xoMr5VDhdgu05EpKhhF1Wj10yfdRxexqRRlm1A=", "login"=>"test_acct8", "password"=>"test12"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE (login = 'test_acct8' and activated_at IS NOT NULL) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 9ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-26 12:56:13) [GET]
+  [4;36;1mNetwork Load (0.7ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+  [4;36;1mNetwork Load (0.3ms)[0m   [0;1mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 3) AND (("memberships".user_id = 8)) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 6) AND (("memberships".user_id = 8)) LIMIT 1[0m
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 7) AND (("memberships".user_id = 8)) LIMIT 1[0m
+Rendered shared/_header (0.8ms)
+Completed in 28ms (View: 21, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-26 12:56:16) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 3) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendered shared/_header (1.8ms)
+Completed in 84ms (View: 10, DB: 1) | 200 OK [http://localhost/networks/3]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-07-26 12:56:24) [GET]
+  Parameters: {"network_id"=>"3"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/new
+ERROR: compiling _run_erb_app47views47articles47new46html46erb RAISED compile error
+/Users/jlaster/CODE/projects/Tulips/app/views/articles/new.html.erb:6: syntax error, unexpected '(', expecting kEND
+;  form_for @article(:network_id => @article.networ...
+                     ^
+/Users/jlaster/CODE/projects/Tulips/app/views/articles/new.html.erb:6: syntax error, unexpected ')', expecting kEND
+...ork_id => @article.network.id) do |f| ; @output_buffer.conca...
+                              ^
+/Users/jlaster/CODE/projects/Tulips/app/views/articles/new.html.erb:33: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47articles47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New article</h1>\n\n<p> "
+
+; @output_buffer.concat(( @article.network.name ).to_s); @output_buffer.concat " </p>\n<p> "
+; @output_buffer.concat(( @article.poster).to_s); @output_buffer.concat "\n\n"
+
+;  form_for @article(:network_id => @article.network.id) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\t\n\t<p>\n\t\t"
+
+
+; @output_buffer.concat(( f.label :title ).to_s); @output_buffer.concat " <br />\n\t\t"
+; @output_buffer.concat(( f.text_field :title ).to_s); @output_buffer.concat "\n\t</p>\n\t<p>\n\t\t"
+
+
+; @output_buffer.concat(( f.label :url ).to_s); @output_buffer.concat " <br />\n\t\t"
+; @output_buffer.concat(( f.text_field :url ).to_s); @output_buffer.concat "\n\t</p>\n\t<p>\n\t\t"
+
+
+; @output_buffer.concat(( f.label :source ).to_s); @output_buffer.concat " <br />\n\t\t"
+; @output_buffer.concat(( f.text_field :source ).to_s); @output_buffer.concat "\n\t</p>\n\t<p>\n\t\t"
+
+
+; @output_buffer.concat(( f.label :description ).to_s); @output_buffer.concat " <br />\n\t\t"
+; @output_buffer.concat(( f.text_area :description ).to_s); @output_buffer.concat "\n\t</p>\n\t\n\t<p>\n    "
+
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n\n"
+
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/jlaster/CODE/projects/Tulips/app/views/articles/new.html.erb:33:in `compile!'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/jlaster/CODE/projects/Tulips/app/views/articles/new.html.erb:6: syntax error, unexpected '(', expecting kEND
+;  form_for @article(:network_id => @article.networ...
+                     ^
+/Users/jlaster/CODE/projects/Tulips/app/views/articles/new.html.erb:6: syntax error, unexpected ')', expecting kEND
+...ork_id => @article.network.id) do |f| ; @output_buffer.conca...
+                              ^
+/Users/jlaster/CODE/projects/Tulips/app/views/articles/new.html.erb:33: syntax error, unexpected kENSURE, expecting $end) on line #6 of app/views/articles/new.html.erb:
+3: <p> <%= @article.network.name %> </p>
+4: <p> <%= @article.poster%>
+5: 
+6: <% form_for @article(:network_id => @article.network.id) do |f| %>
+7:   <%= f.error_messages %>
+8: 	
+9: 	<p>
+
+    app/views/articles/new.html.erb:33:in `compile!'
+
+Rendered rescues/_trace (45.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-07-26 12:56:44) [GET]
+  Parameters: {"network_id"=>"3"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/new
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = 3) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+
+ActionView::TemplateError (undefined method `articles_path' for #<ActionView::Base:0x104460000>) on line #6 of app/views/articles/new.html.erb:
+3: <p> <%= @article.network.name %> </p>
+4: <p> <%= @article.poster%>
+5: 
+6: <% form_for @article do |f| %>
+7:   <%= f.error_messages %>
+8: 	
+9: 	<p>
+
+    app/views/articles/new.html.erb:6
+
+Rendered rescues/_trace (51.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)

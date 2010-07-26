@@ -13,10 +13,10 @@ a img {border:none;}
 #main   {width:1024px; min-height:400px; padding:30px; margin:40px auto 0px auto; background-color:#e1ebf2;}
  
 #main h2                            {padding-bottom:20px;}
-#main table.networks                {width:100%;}
-#main table.networks tr             {height:30px; border-bottom:1px solid #333;}
-#main table.networks td.title       {width:60%;}
-#main table.networks td.links div   {float:right;}
+table.networks                {width:100%;}
+table.networks tr             {padding:5px 0px; border:1px solid black;}
+table.networks td.title       {width:60%;}
+table.networks td.links div   {float:right;}
 
 #articles {}
 #articles .article {margin:10px 0px;}
