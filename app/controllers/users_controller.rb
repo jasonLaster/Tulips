@@ -5,6 +5,18 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+  
+  def show
+    @user = User.find(params[:id])
+  end
+ 
+  def networks 
+    if current_user
+      @networks = current_user.networks 
+    else
+      @networks = nil
+    end
+  end
  
   def create
     logout_keeping_session!
@@ -35,4 +47,7 @@ class UsersController < ApplicationController
       redirect_back_or_default('/')
     end
   end
+  
+  
+  
 end

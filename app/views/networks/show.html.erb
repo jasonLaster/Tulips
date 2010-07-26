@@ -1,5 +1,15 @@
-<h2><%= @network.name %> </h1>
-<p><%= @network.description %> </p>
+<h3><%= @network.name %></h3> 
 
-<%= link_to 'Edit', edit_network_path(@network) %> |
-<%= link_to 'Back', networks_path %>
+<div id="articles">
+<% @articles.each do |article| %>
+
+	<div class="article">
+		<%= article.title %> (<%= article.source %>) <br />
+		by <%= article.poster %> 
+	</div>
+	
+	
+<% end %>
+</div>
+
+

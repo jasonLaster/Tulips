@@ -1,0 +1,22 @@
+body {background-color:#0072bb; font:90% helvetica, arial, sans-serif; color:#000;}
+body, form, h1, h2, h3, h4, h5, h6 {margin:0; padding:0}
+a, a:link, a:visited {text-decoration:none; color:#0066cc; cursor:pointer; outline-style:none}
+a:hover, a:focus {text-decoration:underline; color:#0066cc;}
+a img {border:none;}
+
+#top                {width:100%; background-color:#fff; border-bottom:1px solid #045d96;}
+#header             {width:1024px; height:40px; margin:0px auto 0px auto;}
+#header h1          {float:left; line-height:40px; font-size:25px;}
+#header ul#nav      {float: right; list-style:none; }
+#header ul#nav li   {float:left; margin-right:15px;}
+
+#main   {width:1024px; min-height:400px; padding:30px; margin:40px auto 0px auto; background-color:#e1ebf2;}
+ 
+#main h2                            {padding-bottom:20px;}
+#main table.networks                {width:100%;}
+#main table.networks tr             {height:30px; border-bottom:1px solid #333;}
+#main table.networks td.title       {width:60%;}
+#main table.networks td.links div   {float:right;}
+
+#articles {}
+#articles .article {margin:10px 0px;}

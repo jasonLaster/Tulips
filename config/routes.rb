@@ -5,10 +5,23 @@ ActionController::Routing::Routes.draw do |map|
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
 
+  map.join '/join/:network_id/:user_id', :controller => 'memberships', :action => 'create'
+  map.unjoin '/unjoin/:network_id/:user_id', :controller => 'memberships', :action => 'destroy'
 
-  map.resources :users
+  map.resources :users, 
+                :has_many => :networks,
+                :collection => {:networks => :get}
+                
   map.resource :session
-  map.resources :networks
+  
+  map.resources :networks,
+                :has_many => [:users, :articles],
+                :collection => {:members => :get}
+                
+  map.resources :memberships
+  
+
+        
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -49,7 +62,8 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
+  
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
-
+  map.connect ':controller/:action'
 end

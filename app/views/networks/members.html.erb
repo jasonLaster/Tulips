@@ -1,0 +1,6 @@
+<h2>Members</h2>
+<% if @members %>	
+	<% @members.each do |member| %>
+		<%= member.name %> <br />
+	<% end %>
+<% end %>

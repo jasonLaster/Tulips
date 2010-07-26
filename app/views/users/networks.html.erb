@@ -1,0 +1,12 @@
+<h2> <%= current_user.name %>'s Networks</h2>
+<% if @networks %>	
+	
+	<ul>
+	<% @networks.each do |network| %>
+	  <li><%= (network.name ? network.name : "") + "  -  " + (network.description ? network.description : "")%></li>
+	<% end %>
+	<ul>
+<% end %>
+	
+
+	
