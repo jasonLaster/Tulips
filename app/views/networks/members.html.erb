@@ -1,6 +1,15 @@
-<h2>Members</h2>
-<% if @members %>	
-	<% @members.each do |member| %>
-		<%= member.name %> <br />
+<div class="header">
+	<h2>Members</h2>
+</div>
+
+<div class="body">
+	<% if @members %>	
+		<% @members.each do |member| %>
+			<%= member.name %> <br />
+		<% end %>
 	<% end %>
-<% end %>
+</div>
+
+<div class="footer">
+	&nbsp;
+</div>

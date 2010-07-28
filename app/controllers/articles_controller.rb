@@ -1,5 +1,8 @@
 class ArticlesController < ApplicationController
   
+  before_filter :login_required
+  
+  
   # def index
   #   @networks = Network.all
   # end
@@ -15,9 +18,8 @@ class ArticlesController < ApplicationController
   # end
 
   def new
-    @article = Article.new(:network_id => params[:network_id])
-    @article.user_id = current_user.id
-    puts @article
+    @network = Network.find(params[:network_id])
+    @article = @network.articles.new
   end
 
   # def edit
@@ -25,13 +27,18 @@ class ArticlesController < ApplicationController
   # end
   # 
   def create
+    @network = Network.find_by_id(params[:network_id])
+    
+    
     @article = Article.new(params[:article])
-  
+    @article.network_id = params[:network_id]
+    @article.user_id = current_user.id
+    
     if @article.save
       flash[:notice] = 'Article was successfully created.'
-      redirect_to(network_path(@article.network))
+      redirect_to(network_path(@network))
     else
-      render :action => "new" 
+      render new_network_article(@network)
     end
   end
   # 
@@ -46,9 +53,11 @@ class ArticlesController < ApplicationController
   #   end
   # end
   # 
-  # def destroy
-  #   @network = Network.find(params[:id])
-  #   @network.destroy
-  #   redirect_to(networks_url)
-  # end
+  def destroy
+    @network = Network.find_by_id(params[:id])
+    @article = Article.find_by_id(params[:id])
+    redirect_to(networks_path(@network))
+  end
+  
 end
+

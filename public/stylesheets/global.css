@@ -4,19 +4,53 @@ a, a:link, a:visited {text-decoration:none; color:#0066cc; cursor:pointer; outli
 a:hover, a:focus {text-decoration:underline; color:#0066cc;}
 a img {border:none;}
 
+
+body                {padding-bottom:200px;}
 #top                {width:100%; background-color:#fff; border-bottom:1px solid #045d96;}
 #header             {width:1024px; height:40px; margin:0px auto 0px auto;}
 #header h1          {float:left; line-height:40px; font-size:25px;}
 #header ul#nav      {float: right; list-style:none; }
 #header ul#nav li   {float:left; margin-right:15px;}
 
-#main   {width:1024px; min-height:400px; padding:30px; margin:40px auto 0px auto; background-color:#e1ebf2;}
- 
-#main h2                            {padding-bottom:20px;}
-table.networks                {width:100%;}
-table.networks tr             {padding:5px 0px; border:1px solid black;}
-table.networks td.title       {width:60%;}
-table.networks td.links div   {float:right;}
+#main               {position:relative; width:1024px; min-height:400px; margin:20px auto 0px auto; background-color:#d6dde5;}
+
+.header             {height:50px; padding:0px 10px; background-color:#004681;}
+.header h2          {float:left; line-height:50px;  color:#d6dde5;}
+.header a           {color:#d6dde5;}
+.header ul          {float:right; height:50px; list-style:none; padding:0px; margin:0px;}
+.header li          {float:left; line-height:50px;}
+
+.body               {width:100%; padding:20px 0px 40px 20px;}
+
+#main .footer             {width:100%; height:30px; position:absolute; bottom:0px; background-color:#c3ced5;}
+#main .footer a           {padding:10px;line-height:30px;}
+
+#main .body table.networks                {}
+#main .body table.networks tr             {padding:5px 0px; border:1px solid black;}
+#main .body table.networks td.title       {width:800px;}
+#main .body table.networks td.links div   {float:right;}
+
+#main .body .text     {margin:30px 60px; width:700px;}
+#main .body .text h2  {font-size:25px; line-height:40px; color:#004681; margin:0px; padding:0px;}
+#main .body .text p   {font-size:15px; line-height:20px; color:#333; padding:0px; margin-top:20px;}
+
+.body ul        {list-style:none;}
+
 
 #articles {}
 #articles .article {margin:10px 0px;}
+.article span.source {color:#333;}
+/*.article span.poster {color:#4b3b99;}
+.article span.like a {color:#555;}
+.article span.points {color:#555;}
+.article span.date {color:#555;}*/
+.article span.second-line,.article span.second-line a  {color:#555; font-size:12px;}
+
+
+.container  {width:1024px; height:20px; margin:0px auto; }
+p.flash {line-height:20px; text-align:center; color:#fff;}
+
+
+
+
+

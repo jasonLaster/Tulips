@@ -1,11 +1,14 @@
 class NetworksController < ApplicationController
-  
+
   def index
+  end
+  
+  def networks
     @networks = Network.all
   end
 
   def show
-    @network = Network.find(params[:id])
+    @network = Network.find_by_id(params[:id])
     @articles = @network.articles
   end
 
@@ -24,7 +27,6 @@ class NetworksController < ApplicationController
 
   def create
     @network = Network.new(params[:network])
-
     if @network.save
       flash[:notice] = 'Network was successfully created.'
       redirect_to(@network)

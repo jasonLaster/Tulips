@@ -10,9 +10,14 @@
 <body>
 	
 	<%=render :partial => "shared/header"%>
+	
+	<div class="container">
+		<p class="flash"><%= flash[:notice] %></p>
+	</div>
+	
 	<div id="main">
-		<p style="color: green"><%= flash[:notice] %></p>
 		<%= yield %>
 	</div>
+	
 </body>
 </html>

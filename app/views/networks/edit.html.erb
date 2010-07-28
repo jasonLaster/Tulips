@@ -1,23 +1,29 @@
+<div class="header">
+	<h2>Editing network</h2>
+</div>
 
-<h1>Editing network</h1>
+<div class="body">
 
-<% form_for(@network) do |f| %>
-  <%= f.error_messages %>
+	<% form_for(@network) do |f| %>
+	  <%= f.error_messages %>
 
-	<p>
-		<%= f.label :name %> <br />
-		<%= f.text_field :name %>
-	</p>
+		<p>
+			<%= f.label :name %> <br />
+			<%= f.text_field :name %>
+		</p>
 
-	<p>
-		<%= f.label :description %> <br />
-		<%= f.text_field :description %>
-	</p>
+		<p>
+			<%= f.label :description %> <br />
+			<%= f.text_field :description %>
+		</p>
 
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+	  <p>
+	    <%= f.submit 'Update' %>
+	  </p>
+	<% end %>
+</div>
 
-<%= link_to 'Show', @network %> |
-<%= link_to 'Back', networks_path %>
+<div class="footer">
+	<%= link_to 'Show', @network %> |
+	<%= link_to 'Back', networks_path %>
+</div>

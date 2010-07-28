@@ -14,13 +14,10 @@ class MembershipsController < ApplicationController
   end
 
   def destroy
-    @membership = Membership.find(:first, :conditions => "network_id = '#{params[:network_id]}' AND user_id = '#{params[:user_id]}'")
-
-
+    @membership = Membership.find(:first, :conditions => ["network_id = :network_id and user_id = :user_id", params])
     @membership.destroy
+    flash[:notice] = "You have succesfully left a network."
     redirect_to(networks_users_path)
   end
   
 end
-
-

@@ -1,29 +1,20 @@
+<div class="header">
+	&nbsp;
+</div>
 
-<h2>Networks</h2>
+<div class="body">
+	<div class="text">
+		<h2>Welcome to Something Remarkable!</h2>
+		<p>We hope to help you build a social network around sharing things you find remarkable. 
+			These networks could be as well defined as your family or co-workers or as broadly defined as the industry you're a part of or interests you pursue.</p>
 
-<table class="networks">
-<% @networks.each do |network| %>
-  <tr>
-		<td class="title">
-			<strong><%= link_to (network.name ? network.name : ""), network_path(:id => network.id) %> </strong> <br />
-			<%= (network.description ? network.description : "")%>
+		<p>Something Remarkable draws its inspiration from <%= link_to 'Hacker News', "http://news.ycombindator.com" %> and the greater bread of social news-aggregators (<%= link_to 'Digg', "http://Digg.com" %>, <%= link_to 'Reddit', 'http://Reddit.com' %>, <%= link_to 'Twitter', 'http://Twitter.com' %>).To see what we've built so far, take a look at some of our <%= link_to 'dummy networks.', networks_networks_path %> If you like / hate the idea or want to get involved, email Jason.Laster.11 at gmail dot com. </p>
 
-			
-			<% if current_user %>
-				<% if current_user.member?(network) %>
-					<%= link_to 'Unjoin', unjoin_path(:network_id => network.id, :user_id => current_user.id) %> 	
-				<% else %>
-					<%= link_to 'Join', join_path(:network_id => network.id, :user_id => current_user.id) %>
-				<% end %>
-			<% end %>
-		</td>
-    <td class="links">
-			<div>
-				<%= link_to 'Members', members_networks_path(:id => network.id) %>  - 
-				<%= link_to 'Edit', edit_network_path(network) %> - 
-				<%= link_to 'Destroy', network, :confirm => 'Are you sure?', :method => :delete %>
-			</div>
-		</td>
-  </tr>
-<% end %>
-</table>
+	</div>
+</div>
+
+<div class="footer">
+	&nbsp;
+</div>
+
+

@@ -1,15 +1,31 @@
-<h3><%= @network.name %></h3> 
-
-<div id="articles">
-<% @articles.each do |article| %>
-
-	<div class="article">
-		<%= article.title %> (<%= article.source %>) <br />
-		by <%= article.poster %> 
-	</div>
-	
-	
-<% end %>
+<div class="header">
+	<h2><%= @network.name %></h2> 
+	<ul class="links">
+		<li><%= link_to 'new article', new_network_article_path(@network) %></li>
+	</ul>
+	<div style="clear:both"></div>
 </div>
 
 
+
+<div class="body">
+	<div id="articles">
+	<% @articles.each do |article| %>
+		<div class="article">
+			<span class="title"> <%= link_to article.title, "http://#{article.url}" %> </span>
+			<span class="source">(<%= article.source %>)</span> <br />
+			
+			<span class="second-line like"><%= link_to 'like', '#'%> &nbsp; </span> 
+			<span class="second-line points"> <%=  (rand * 100).round %> points &nbsp; </span>
+			<span class="second-line poster">by <%= article.poster %> &nbsp; </span> 
+			<span class="second-line date"> <%= time_ago_in_words(article.created_at)%> ago &nbsp;</span>
+			<span class="second-line comments"> <%= link_to (rand * 50).round.to_s + " comments", '#' %>  &nbsp;</span>
+			
+		</div>
+	<% end %>
+	</div>
+</div>
+
+<div class="footer">
+	<%= link_to '&larr; back to networks', networks_networks_path %>
+</div>

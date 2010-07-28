@@ -16,7 +16,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :networks,
                 :has_many => [:users, :articles],
-                :collection => {:members => :get}
+                :collection => {:members => :get, :networks => :get}
                 
   map.resources :memberships
   

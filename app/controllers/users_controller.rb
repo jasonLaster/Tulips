@@ -12,7 +12,10 @@ class UsersController < ApplicationController
  
   def networks 
     if current_user
+
       @networks = current_user.networks 
+      
+      puts "\n"*10 +  @networks.inspect
     else
       @networks = nil
     end
