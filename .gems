@@ -1,2 +1,3 @@
-rubyist-aasm --version '2.1.5' --lib "http://gems.github.com"
+rails -v 2.3.5
+rubyist-aasm --version '2.1.5' --source "http://gems.github.com"
 
