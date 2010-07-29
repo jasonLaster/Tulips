@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :memberships
   has_many :networks, :through => :memberships
   has_many :articles
+  has_many :comments
   
   
   

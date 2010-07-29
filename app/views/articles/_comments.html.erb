@@ -1,0 +1,9 @@
+<% children.each do |comment| %>
+	
+	<p><%= comment.id.to_s + " - " + comment.body %></p>
+	
+	<% if comment.comments %>
+		<%= render :partial => "comments", :locals => {:children => comment.comments} %>
+	<% end %>
+	
+<% end %>

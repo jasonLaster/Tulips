@@ -3,7 +3,7 @@ class NetworksController < ApplicationController
   def index
   end
   
-  def networks
+  def all_networks
     @networks = Network.all
   end
 

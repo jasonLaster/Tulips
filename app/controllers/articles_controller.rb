@@ -1,16 +1,20 @@
 class ArticlesController < ApplicationController
   
-  before_filter :login_required
+  before_filter :login_required, :only => :new
   
   
   # def index
   #   @networks = Network.all
   # end
   # 
-  # def show
-  #   @network = Network.find(params[:id])
-  #   @articles = @network.articles
-  # end
+  def show
+    @network = Network.find_by_id(params[:network_id])
+    @article = Article.find_by_id(params[:id])
+
+    comments = @article.comments
+    @top_level_comments = comments - comments.select(&:comment)
+
+  end
   # 
   # def members
   #   @network = Network.find(params[:id])

@@ -1,0 +1,9 @@
+<div class="header">
+	<h2><%= @article.title %></h2>
+</div>
+
+<div class="body">
+
+	<%= render :partial => "comments", :locals => {:children => @top_level_comments} %>
+
+</div>

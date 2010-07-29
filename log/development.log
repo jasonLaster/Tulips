@@ -14281,3 +14281,2147 @@ Rendering networks/show
   [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
 Rendered shared/_header (2.0ms)
 Completed in 124ms (View: 38, DB: 3) | 200 OK [http://localhost/networks/8]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-28 01:26:05) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (4.2ms)
+Completed in 17ms (View: 15, DB: 0) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#networks (for 127.0.0.1 at 2010-07-28 01:26:07) [GET]
+  [4;36;1mNetwork Load (0.5ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/networks
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;36;1mNetwork Load (0.3ms)[0m   [0;1mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 8) AND (("memberships".user_id = 9)) LIMIT 1[0m
+Rendered shared/_header (0.5ms)
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/networks/networks]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 01:26:11) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (2.5ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (2.2ms)
+Completed in 45ms (View: 31, DB: 3) | 200 OK [http://localhost/networks/8]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-28 01:26:14) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (4.3ms)
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#networks (for 127.0.0.1 at 2010-07-28 01:26:16) [GET]
+  [4;35;1mNetwork Load (0.7ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/networks
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.3ms)[0m   [0mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 8) AND (("memberships".user_id = 9)) LIMIT 1[0m
+Rendered shared/_header (0.5ms)
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/networks/networks]
+
+
+Processing MembershipsController#destroy (for 127.0.0.1 at 2010-07-28 01:26:27) [GET]
+  Parameters: {"network_id"=>"8", "user_id"=>"9"}
+  [4;36;1mMembership Load (0.6ms)[0m   [0;1mSELECT * FROM "memberships" WHERE (network_id = '8' and user_id = '9') LIMIT 1[0m
+  [4;35;1mMembership Destroy (0.3ms)[0m   [0mDELETE FROM "memberships" WHERE "id" = 15[0m
+Redirected to http://localhost:3000/users/networks
+Completed in 58ms (DB: 1) | 302 Found [http://localhost/unjoin/8/9]
+
+
+Processing UsersController#networks (for 127.0.0.1 at 2010-07-28 01:26:27) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT "networks".* FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE (("memberships".user_id = 9)) [0m
+Rendering template within layouts/application
+Rendering users/networks
+Rendered shared/_header (0.9ms)
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://localhost/users/networks]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-28 01:26:29) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (3.9ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#networks (for 127.0.0.1 at 2010-07-28 01:26:31) [GET]
+  [4;35;1mNetwork Load (0.5ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/networks
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 8) AND (("memberships".user_id = 9)) LIMIT 1[0m
+Rendered shared/_header (0.6ms)
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://localhost/networks/networks]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 01:26:32) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;35;1mArticle Load (2.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (2.1ms)
+Completed in 44ms (View: 30, DB: 3) | 200 OK [http://localhost/networks/8]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-07-28 01:26:34) [GET]
+  Parameters: {"network_id"=>"8"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;36;1mNetwork Load (0.3ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered shared/_header (0.7ms)
+Completed in 28ms (View: 6, DB: 1) | 200 OK [http://localhost/networks/8/articles/new]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-28 01:26:35) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (3.7ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#networks (for 127.0.0.1 at 2010-07-28 01:26:37) [GET]
+  [4;36;1mNetwork Load (0.6ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/networks
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 8) AND (("memberships".user_id = 9)) LIMIT 1[0m
+Rendered shared/_header (0.6ms)
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/networks/networks]
+
+
+Processing MembershipsController#create (for 127.0.0.1 at 2010-07-28 01:26:38) [GET]
+  Parameters: {"network_id"=>"8", "user_id"=>"9"}
+  [4;35;1mMembership Create (0.4ms)[0m   [0mINSERT INTO "memberships" ("created_at", "network_id", "updated_at", "admin", "user_id", "created_dt") VALUES('2010-07-28 08:26:38', 8, '2010-07-28 08:26:38', NULL, 9, NULL)[0m
+Redirected to http://localhost:3000/users/networks
+Completed in 54ms (DB: 0) | 302 Found [http://localhost/join/8/9]
+
+
+Processing UsersController#networks (for 127.0.0.1 at 2010-07-28 01:26:38) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.4ms)[0m   [0mSELECT "networks".* FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE (("memberships".user_id = 9)) [0m
+Rendering template within layouts/application
+Rendering users/networks
+Rendered shared/_header (0.5ms)
+Completed in 20ms (View: 6, DB: 1) | 200 OK [http://localhost/users/networks]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 01:26:42) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mNetwork Load (0.3ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;35;1mArticle Load (2.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (2.0ms)
+Completed in 44ms (View: 30, DB: 3) | 200 OK [http://localhost/networks/8]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-28 12:25:54) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (27.4ms)
+Completed in 192ms (View: 190, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing NetworksController#networks (for 127.0.0.1 at 2010-07-28 12:25:56) [GET]
+  [4;36;1mNetwork Load (16.9ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/networks
+Rendered shared/_header (0.4ms)
+Completed in 61ms (View: 23, DB: 17) | 200 OK [http://localhost/networks/networks]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 12:25:58) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (4.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+Rendered shared/_header (0.7ms)
+Completed in 458ms (View: 441, DB: 5) | 200 OK [http://localhost/networks/8]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 12:30:07) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;35;1mArticle Load (3.1ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+Rendered shared/_header (1.5ms)
+Completed in 159ms (View: 77, DB: 4) | 200 OK [http://localhost/networks/8]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 12:30:07) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;35;1mArticle Load (2.6ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+Rendered shared/_header (0.6ms)
+Completed in 111ms (View: 98, DB: 3) | 200 OK [http://localhost/networks/8]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 12:33:25) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mNetwork Load (0.3ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;35;1mArticle Load (3.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+Rendered shared/_header (1.7ms)
+Completed in 174ms (View: 85, DB: 4) | 200 OK [http://localhost/networks/8]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-28 12:33:28) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered shared/_header (0.5ms)
+Completed in 26ms (View: 22, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-28 12:33:41) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"hJhIYQH7ouLgaGaR2OJSi10HvENqqS/xStZllJ9YP8U=", "user"=>{"password_confirmation"=>"sigma88", "password"=>"sigma88", "login"=>"testacct1", "email"=>"Jason.Laster.11@gmail.com"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'testacct1') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'jason.laster.11@gmail.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered shared/_header (0.4ms)
+Completed in 18ms (View: 8, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-28 12:34:05) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"hJhIYQH7ouLgaGaR2OJSi10HvENqqS/xStZllJ9YP8U=", "user"=>{"password_confirmation"=>"sigma88", "password"=>"sigma88", "login"=>"testacct1", "email"=>"jason.laster.11+1@gmail.com"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'testacct1') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'jason.laster.11+1@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "created_at", "activated_at", "crypted_password", "remember_token_expires_at", "updated_at", "activation_code", "remember_token", "login", "email") VALUES('', 'ce5bcd8116f111f33b4b2543270168868f31a2b2', '2010-07-28 19:34:05', NULL, 'ba00410a6c5054b9a829a1d31a301c999c6feacb', NULL, '2010-07-28 19:34:05', 'cf11c783dcdf692e87f7926f4d77195ddef1b8a8', NULL, 'testacct1', 'jason.laster.11+1@gmail.com')[0m
+Sent mail to jason.laster.11+1@gmail.com
+
+Date: Wed, 28 Jul 2010 12:34:05 -0700
+From: ADMINEMAIL
+To: jason.laster.11+1@gmail.com
+Subject: localhost:3000Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: testacct1
+  Password: sigma88
+
+Visit this url to activate your account:
+
+  http://localhost:3000/activate/cf11c783dcdf692e87f7926f4d77195ddef1b8a8
+Redirected to http://localhost:3000/
+Completed in 4948ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-28 12:34:10) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.6ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-28 12:38:51) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered shared/_header (0.5ms)
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-28 16:08:20) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.7ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-28 17:49:43) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (1.7ms)
+Completed in 91ms (View: 89, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing NetworksController#networks (for 127.0.0.1 at 2010-07-28 17:49:45) [GET]
+  [4;36;1mNetwork Load (0.6ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/networks
+Rendered shared/_header (0.4ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/networks/networks]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-28 17:49:48) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered shared/_header (0.5ms)
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-28 17:50:00) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"hJhIYQH7ouLgaGaR2OJSi10HvENqqS/xStZllJ9YP8U=", "user"=>{"password_confirmation"=>"test12", "password"=>"test12", "login"=>"test2", "email"=>"jason.laster.11+2@gmail.com"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'test2') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'jason.laster.11+2@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("name", "salt", "created_at", "activated_at", "crypted_password", "remember_token_expires_at", "updated_at", "activation_code", "remember_token", "login", "email") VALUES('', 'e0ff14baba72045cff1ef351d040cba9575af1ce', '2010-07-29 00:50:00', NULL, 'a875c11362c64a99d25d501f890a93676f6071a8', NULL, '2010-07-29 00:50:00', '2ad9a44fb7d5424668aa6ec5856138e6ea6df9ce', NULL, 'test2', 'jason.laster.11+2@gmail.com')[0m
+Sent mail to jason.laster.11+2@gmail.com
+
+Date: Wed, 28 Jul 2010 17:50:00 -0700
+From: ADMINEMAIL
+To: jason.laster.11+2@gmail.com
+Subject: localhost:3000Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: test2
+  Password: test12
+
+Visit this url to activate your account:
+
+  http://localhost:3000/activate/2ad9a44fb7d5424668aa6ec5856138e6ea6df9ce
+Redirected to http://localhost:3000/
+Completed in 3412ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-28 17:50:04) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.6ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNetworks (20100725023812)
+Migrating to CreateUsers (20100725025640)
+Migrating to CreateMemberships (20100725184606)
+Migrating to CreateArticles (20100725225910)
+Migrating to AddCountsToUserTable (20100729011445)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TEMPORARY TABLE "altered_articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "url" varchar(255), "source" varchar(255), "description" text, "total_likes" integer, "user_id" integer, "network_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mDROP TABLE "articles"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "url" varchar(255), "source" varchar(255), "description" text, "total_likes" integer, "user_id" integer, "network_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_articles")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDROP TABLE "altered_articles"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "articles" ADD "total_comments" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100729011445')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("memberships")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("networks")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_users_on_login')[0m
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-28 18:45:40) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (1.6ms)
+Completed in 98ms (View: 96, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing NetworksController#networks (for 127.0.0.1 at 2010-07-28 18:45:42) [GET]
+  [4;36;1mNetwork Load (0.6ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/networks
+Rendered shared/_header (0.4ms)
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/networks/networks]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 18:45:44) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (2.7ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+Rendered shared/_header (0.6ms)
+Completed in 223ms (View: 208, DB: 3) | 200 OK [http://localhost/networks/8]
+  [4;36;1mArticle Load (2.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mArticle Load (2.6ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Update (0.4ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:47:19', "total_likes" = 23, "url" = 'http://adweek.blogs.com ', "total_comments" = 40 WHERE "id" = 84[0m
+  [4;35;1mArticle Update (0.3ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:47:19', "total_likes" = 7, "url" = 'http://jasonlbaptiste.com They Won', "total_comments" = 1 WHERE "id" = 85[0m
+  [4;36;1mArticle Update (0.5ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:47:19', "total_likes" = 29, "url" = 'http://cygwin.com ', "total_comments" = 62 WHERE "id" = 86[0m
+  [4;35;1mArticle Update (0.3ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:47:19', "total_likes" = 24, "url" = 'http://drugwars.mobi ', "total_comments" = 3 WHERE "id" = 87[0m
+  [4;36;1mArticle Update (0.4ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:47:19', "total_likes" = 11, "url" = 'http://microsoft.com ', "total_comments" = 88 WHERE "id" = 88[0m
+  [4;35;1mArticle Update (0.3ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:47:19', "total_likes" = 26, "url" = 'http://github.com ', "total_comments" = 62 WHERE "id" = 89[0m
+  [4;36;1mArticle Update (0.3ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:47:19', "total_likes" = 21, "url" = 'http://fffff.at ', "total_comments" = 26 WHERE "id" = 90[0m
+  [4;35;1mArticle Update (0.3ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:47:19', "total_likes" = 40, "url" = 'http://keepstream.com ', "total_comments" = 28 WHERE "id" = 91[0m
+  [4;36;1mArticle Update (0.5ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:47:19', "total_likes" = 48, "url" = 'http://python.org ', "total_comments" = 79 WHERE "id" = 92[0m
+  [4;35;1mArticle Update (0.6ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:47:19', "total_likes" = 25, "url" = 'http://nytimes.com ', "total_comments" = 44 WHERE "id" = 93[0m
+  [4;36;1mArticle Update (0.3ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:47:19', "total_likes" = 34, "url" = 'http://esri.com ', "total_comments" = 46 WHERE "id" = 94[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mArticle Load (3.8ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (72.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mArticle Update (0.3ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 47, "url" = 'http://http://adweek.blogs.com ', "total_comments" = 32 WHERE "id" = 84[0m
+  [4;36;1mArticle Update (0.5ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 39, "url" = 'http://http://jasonlbaptiste.com They Won', "total_comments" = 55 WHERE "id" = 85[0m
+  [4;35;1mArticle Update (0.3ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 28, "url" = 'http://http://cygwin.com ', "total_comments" = 7 WHERE "id" = 86[0m
+  [4;36;1mArticle Update (0.6ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 48, "url" = 'http://http://drugwars.mobi ', "total_comments" = 91 WHERE "id" = 87[0m
+  [4;35;1mArticle Update (0.4ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 2, "url" = 'http://http://microsoft.com ', "total_comments" = 61 WHERE "id" = 88[0m
+  [4;36;1mArticle Update (0.3ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 13, "url" = 'http://http://github.com ', "total_comments" = 69 WHERE "id" = 89[0m
+  [4;35;1mArticle Update (0.4ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 16, "url" = 'http://http://fffff.at ', "total_comments" = 12 WHERE "id" = 90[0m
+  [4;36;1mArticle Update (0.3ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 31, "url" = 'http://http://keepstream.com ', "total_comments" = 16 WHERE "id" = 91[0m
+  [4;35;1mArticle Update (0.3ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 34, "url" = 'http://http://python.org ', "total_comments" = 9 WHERE "id" = 92[0m
+  [4;36;1mArticle Update (0.4ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 35, "url" = 'http://http://nytimes.com ', "total_comments" = 46 WHERE "id" = 93[0m
+  [4;35;1mArticle Update (0.5ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 22, "url" = 'http://http://esri.com ', "total_comments" = 23 WHERE "id" = 94[0m
+  [4;36;1mArticle Update (0.4ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 39, "total_comments" = 65 WHERE "id" = 95[0m
+  [4;35;1mArticle Update (0.4ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 22, "url" = 'http://apple.com ', "total_comments" = 92 WHERE "id" = 96[0m
+  [4;36;1mArticle Update (0.5ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 40, "url" = 'http://nytimes.com ', "total_comments" = 64 WHERE "id" = 97[0m
+  [4;35;1mArticle Update (0.3ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 18, "url" = 'http://kalzumeus.com ', "total_comments" = 3 WHERE "id" = 98[0m
+  [4;36;1mArticle Update (0.3ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 13, "url" = 'http://techcrunch.com ', "total_comments" = 6 WHERE "id" = 99[0m
+  [4;35;1mArticle Update (0.5ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 34, "url" = 'http://technologyreview.com ', "total_comments" = 64 WHERE "id" = 100[0m
+  [4;36;1mArticle Update (0.3ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 44, "url" = 'http://manyniches.com ', "total_comments" = 69 WHERE "id" = 101[0m
+  [4;35;1mArticle Update (0.3ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 44, "url" = 'http://trueventures.com ', "total_comments" = 30 WHERE "id" = 102[0m
+  [4;36;1mArticle Update (0.3ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 45, "url" = 'http://scientificamerican.com ', "total_comments" = 22 WHERE "id" = 103[0m
+  [4;35;1mArticle Update (0.3ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 12, "url" = 'http://paulgraham.com ', "total_comments" = 38 WHERE "id" = 104[0m
+  [4;36;1mArticle Update (0.3ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 6, "url" = 'http://nyu.edu ', "total_comments" = 4 WHERE "id" = 105[0m
+  [4;35;1mArticle Update (0.4ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 37, "url" = 'http://r-bloggers.com ', "total_comments" = 63 WHERE "id" = 106[0m
+  [4;36;1mArticle Update (0.3ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 8, "url" = 'http://jayfields.com ', "total_comments" = 58 WHERE "id" = 107[0m
+  [4;35;1mArticle Update (0.5ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 13, "url" = 'http://8tysix.com ', "total_comments" = 27 WHERE "id" = 108[0m
+  [4;36;1mArticle Update (0.3ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 38, "url" = 'http://37signals.com ', "total_comments" = 92 WHERE "id" = 109[0m
+  [4;35;1mArticle Update (0.3ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 5, "url" = 'http://github.com ', "total_comments" = 36 WHERE "id" = 110[0m
+  [4;36;1mArticle Update (0.3ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 27, "url" = 'http://opensource.com ', "total_comments" = 60 WHERE "id" = 111[0m
+  [4;35;1mArticle Update (0.5ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 35, "total_comments" = 79 WHERE "id" = 112[0m
+  [4;36;1mArticle Update (0.3ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2010-07-29 01:48:33', "total_likes" = 18, "total_comments" = 40 WHERE "id" = 113[0m
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 18:48:36) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (2.7ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+Rendered shared/_header (0.6ms)
+Completed in 45ms (View: 31, DB: 3) | 200 OK [http://localhost/networks/8]
+  [4;35;1mArticle Load (3.6ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mArticle Load (4.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mArticle Destroy (0.5ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 84[0m
+  [4;36;1mArticle Destroy (0.4ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 85[0m
+  [4;35;1mArticle Destroy (0.4ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 86[0m
+  [4;36;1mArticle Destroy (0.3ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 87[0m
+  [4;35;1mArticle Destroy (0.3ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 88[0m
+  [4;36;1mArticle Destroy (0.3ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 89[0m
+  [4;35;1mArticle Destroy (0.4ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 90[0m
+  [4;36;1mArticle Destroy (0.2ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 91[0m
+  [4;35;1mArticle Destroy (0.4ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 92[0m
+  [4;36;1mArticle Destroy (0.2ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 93[0m
+  [4;35;1mArticle Destroy (0.2ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 94[0m
+  [4;36;1mArticle Destroy (0.3ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 95[0m
+  [4;35;1mArticle Destroy (0.3ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 96[0m
+  [4;36;1mArticle Destroy (0.2ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 97[0m
+  [4;35;1mArticle Destroy (0.5ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 98[0m
+  [4;36;1mArticle Destroy (0.2ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 99[0m
+  [4;35;1mArticle Destroy (0.2ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 100[0m
+  [4;36;1mArticle Destroy (0.4ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 101[0m
+  [4;35;1mArticle Destroy (0.3ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 102[0m
+  [4;36;1mArticle Destroy (0.2ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 103[0m
+  [4;35;1mArticle Destroy (0.4ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 104[0m
+  [4;36;1mArticle Destroy (0.3ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 105[0m
+  [4;35;1mArticle Destroy (0.2ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 106[0m
+  [4;36;1mArticle Destroy (0.3ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 107[0m
+  [4;35;1mArticle Destroy (0.2ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 108[0m
+  [4;36;1mArticle Destroy (0.2ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 109[0m
+  [4;35;1mArticle Destroy (0.4ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 110[0m
+  [4;36;1mArticle Destroy (0.3ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 111[0m
+  [4;35;1mArticle Destroy (0.2ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 112[0m
+  [4;36;1mArticle Destroy (0.2ms)[0m   [0;1mDELETE FROM "articles" WHERE "id" = 113[0m
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 18:49:22) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+Rendered shared/_header (0.7ms)
+Completed in 79ms (View: 4, DB: 0) | 200 OK [http://localhost/networks/8]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-07-28 18:49:24) [GET]
+  Parameters: {"network_id"=>"8"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/networks/8/articles/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-28 18:49:24) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_header (0.5ms)
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-07-28 18:49:26) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"hJhIYQH7ouLgaGaR2OJSi10HvENqqS/xStZllJ9YP8U=", "login"=>"firster", "password"=>"sigma88"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE (login = 'firster' and activated_at IS NOT NULL) LIMIT 1[0m
+Redirected to http://localhost:3000/networks/8/articles/new
+Completed in 9ms (DB: 1) | 302 Found [http://localhost/session]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-07-28 18:49:26) [GET]
+  Parameters: {"network_id"=>"8"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered shared/_header (0.9ms)
+Completed in 105ms (View: 13, DB: 1) | 200 OK [http://localhost/networks/8/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-07-28 18:50:17) [POST]
+  Parameters: {"article"=>{"title"=>"Ruling Against Arizona Is a Warning for Other States", "url"=>"http://www.nytimes.com/2010/07/29/us/29immig.html?_r=1&hp", "description"=>"", "source"=>"nytimes.com"}, "commit"=>"Create", "network_id"=>"8", "authenticity_token"=>"hJhIYQH7ouLgaGaR2OJSi10HvENqqS/xStZllJ9YP8U="}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "total_likes", "network_id", "updated_at", "url", "user_id", "total_comments", "description", "source") VALUES('2010-07-29 01:50:17', 'Ruling Against Arizona Is a Warning for Other States', 26, 8, '2010-07-29 01:50:17', 'http://www.nytimes.com/2010/07/29/us/29immig.html?_r=1&hp', 9, 26, '', 'nytimes.com')[0m
+Redirected to http://localhost:3000/networks/8
+Completed in 27ms (DB: 2) | 302 Found [http://localhost/networks/8/articles]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 18:50:17) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (2.4ms)
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/networks/8]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 18:50:28) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (2.4ms)
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/networks/8]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 18:50:29) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (1.9ms)
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://localhost/networks/8]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-28 20:14:31) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (8.0ms)
+Completed in 108ms (View: 105, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing NetworksController#networks (for 127.0.0.1 at 2010-07-28 21:28:56) [GET]
+  [4;35;1mNetwork Load (0.5ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/networks
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.3ms)[0m   [0mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 8) AND (("memberships".user_id = 9)) LIMIT 1[0m
+Rendered shared/_header (0.5ms)
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/networks/networks]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 21:29:01) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (2.0ms)
+Completed in 120ms (View: 109, DB: 1) | 200 OK [http://localhost/networks/8]
+
+
+Processing NetworksController#networks (for 127.0.0.1 at 2010-07-28 21:35:55) [GET]
+  [4;36;1mNetwork Load (0.5ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/networks
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;36;1mNetwork Load (0.3ms)[0m   [0;1mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 8) AND (("memberships".user_id = 9)) LIMIT 1[0m
+Rendered shared/_header (0.5ms)
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://localhost/networks/networks]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 21:37:17) [GET]
+  Parameters: {"id"=>"networks"}
+  [4;35;1mNetwork Load (0.1ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = 'networks') LIMIT 1[0m
+
+NoMethodError (undefined method `articles' for nil:NilClass):
+  app/controllers/networks_controller.rb:12:in `show'
+
+Rendered rescues/_trace (40.8ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NetworksController#all_networks (for 127.0.0.1 at 2010-07-28 21:37:36) [GET]
+  [4;36;1mNetwork Load (0.5ms)[0m   [0;1mSELECT * FROM "networks" [0m
+
+ActionView::MissingTemplate (Missing template networks/all_networks.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NetworksController#all_networks (for 127.0.0.1 at 2010-07-28 21:37:49) [GET]
+  [4;35;1mNetwork Load (0.5ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/all_networks
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 8) AND (("memberships".user_id = 9)) LIMIT 1[0m
+
+ActionView::TemplateError (undefined local variable or method `networks_all_networks_path' for #<ActionView::Base:0x1034634e0>) on line #10 of app/views/shared/_header.html.erb:
+7: 
+8: 		<ul id="nav">
+9: 			<li><%= link_to 'Create a New Network', new_network_path %></li>
+10: 			<li><%= link_to 'See all Networks', networks_all_networks_path %></li>
+11: 			
+12: 	
+13: 		<% if logged_in? %>
+
+    app/views/shared/_header.html.erb:10
+    app/views/layouts/application.html.erb:12
+
+Rendered rescues/_trace (124.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NetworksController#all_networks (for 127.0.0.1 at 2010-07-28 21:38:25) [GET]
+  [4;36;1mNetwork Load (0.5ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/all_networks
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;36;1mNetwork Load (0.3ms)[0m   [0;1mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 8) AND (("memberships".user_id = 9)) LIMIT 1[0m
+
+ActionView::TemplateError (undefined local variable or method `networks_all_networks_path' for #<ActionView::Base:0x103320920>) on line #10 of app/views/shared/_header.html.erb:
+7: 
+8: 		<ul id="nav">
+9: 			<li><%= link_to 'Create a New Network', new_network_path %></li>
+10: 			<li><%= link_to 'See all Networks', networks_all_networks_path %></li>
+11: 			
+12: 	
+13: 		<% if logged_in? %>
+
+    app/views/shared/_header.html.erb:10
+    app/views/layouts/application.html.erb:12
+
+Rendered rescues/_trace (126.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NetworksController#all_networks (for 127.0.0.1 at 2010-07-28 21:38:39) [GET]
+  [4;35;1mNetwork Load (0.5ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/all_networks
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 8) AND (("memberships".user_id = 9)) LIMIT 1[0m
+Rendered shared/_header (1.8ms)
+Completed in 25ms (View: 18, DB: 1) | 200 OK [http://localhost/networks/all_networks]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-28 21:38:41) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (4.2ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#all_networks (for 127.0.0.1 at 2010-07-28 21:38:43) [GET]
+  [4;35;1mNetwork Load (0.5ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/all_networks
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.3ms)[0m   [0mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 8) AND (("memberships".user_id = 9)) LIMIT 1[0m
+Rendered shared/_header (0.5ms)
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/networks/all_networks]
+
+
+Processing NetworksController#all_networks (for 127.0.0.1 at 2010-07-28 21:38:45) [GET]
+  [4;36;1mNetwork Load (0.5ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/all_networks
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;36;1mNetwork Load (0.3ms)[0m   [0;1mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 8) AND (("memberships".user_id = 9)) LIMIT 1[0m
+Rendered shared/_header (0.5ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/networks/all_networks]
+
+
+Processing NetworksController#all_networks (for 127.0.0.1 at 2010-07-28 21:38:46) [GET]
+  [4;35;1mNetwork Load (0.5ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/all_networks
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.3ms)[0m   [0mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 8) AND (("memberships".user_id = 9)) LIMIT 1[0m
+Rendered shared/_header (0.5ms)
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/networks/all_networks]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 21:38:50) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (2.0ms)
+Completed in 28ms (View: 17, DB: 1) | 200 OK [http://localhost/networks/8]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2010-07-28 21:38:51) [GET]
+  Parameters: {"network_id"=>"8"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering articles/new
+Rendered shared/_header (0.6ms)
+Completed in 88ms (View: 11, DB: 1) | 200 OK [http://localhost/networks/8/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2010-07-28 21:39:24) [POST]
+  Parameters: {"article"=>{"title"=>"Wikileaks To Leak 5000 Open Source Java Projects ", "url"=>"http://steve-yegge.blogspot.com/2010/07/wikileaks-to-leak-5000-open-source-java.html", "description"=>"", "source"=>"steve-yegge.blogspot.com"}, "commit"=>"Create", "network_id"=>"8", "authenticity_token"=>"hJhIYQH7ouLgaGaR2OJSi10HvENqqS/xStZllJ9YP8U="}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "total_likes", "network_id", "updated_at", "url", "user_id", "total_comments", "description", "source") VALUES('2010-07-29 04:39:24', 'Wikileaks To Leak 5000 Open Source Java Projects ', 92, 8, '2010-07-29 04:39:24', 'http://steve-yegge.blogspot.com/2010/07/wikileaks-to-leak-5000-open-source-java.html', 9, 49, '', 'steve-yegge.blogspot.com')[0m
+Redirected to http://localhost:3000/networks/8
+Completed in 30ms (DB: 1) | 302 Found [http://localhost/networks/8/articles]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 21:39:24) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (1.9ms)
+Completed in 25ms (View: 14, DB: 2) | 200 OK [http://localhost/networks/8]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 21:39:39) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (2.0ms)
+Completed in 26ms (View: 15, DB: 1) | 200 OK [http://localhost/networks/8]
+
+
+Processing NetworksController#all_networks (for 127.0.0.1 at 2010-07-28 21:39:41) [GET]
+  [4;35;1mNetwork Load (0.5ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/all_networks
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.3ms)[0m   [0mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 8) AND (("memberships".user_id = 9)) LIMIT 1[0m
+Rendered shared/_header (0.5ms)
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/networks/all_networks]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-28 21:42:08) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (3.7ms)
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/networks]
+
+
+Processing NetworksController#all_networks (for 127.0.0.1 at 2010-07-28 21:42:13) [GET]
+  [4;35;1mNetwork Load (0.5ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/all_networks
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+  [4;35;1mNetwork Load (0.3ms)[0m   [0mSELECT "networks".id FROM "networks" INNER JOIN "memberships" ON "networks".id = "memberships".network_id WHERE ("networks"."id" = 8) AND (("memberships".user_id = 9)) LIMIT 1[0m
+Rendered shared/_header (0.5ms)
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/networks/all_networks]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-28 21:42:15) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) LIMIT 1[0m
+Rendered shared/_header (1.9ms)
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/networks/8]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-29 00:08:22) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (25.2ms)
+Completed in 29ms (View: 27, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing NetworksController#all_networks (for 127.0.0.1 at 2010-07-29 00:08:24) [GET]
+  [4;35;1mNetwork Load (0.5ms)[0m   [0mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/all_networks
+Rendered shared/_header (0.5ms)
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/networks/all_networks]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-29 00:08:26) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;35;1mArticle Load (0.5ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+
+ActionView::TemplateError (undefined method `network_article' for #<ActionView::Base:0x103497d58>) on line #22 of app/views/networks/show.html.erb:
+19: 			<span class="second-line points"> <%= article.total_likes %> points &nbsp; </span>
+20: 			<span class="second-line poster">by <%= article.poster %> &nbsp; </span> 
+21: 			<span class="second-line date"> <%= time_ago_in_words(article.created_at)%> ago &nbsp;</span>
+22: 			<span class="second-line comments"> <%= link_to article.total_comments.to_s + " comments", network_article(article) %>  &nbsp;</span>
+23: 			
+24: 		</div>
+25: 	<% end %>
+
+    app/views/networks/show.html.erb:22
+    app/views/networks/show.html.erb:13
+
+Rendered rescues/_trace (118.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-29 00:08:36) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+Rendered shared/_header (0.6ms)
+Completed in 28ms (View: 18, DB: 1) | 200 OK [http://localhost/networks/8]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 00:08:38) [GET]
+  Parameters: {"network_id"=>"115", "id"=>"8"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/networks/115/articles/8]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-07-29 00:08:38) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_header (0.5ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/session/new]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-29 00:09:42) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+Rendered shared/_header (0.6ms)
+Completed in 28ms (View: 18, DB: 1) | 200 OK [http://localhost/networks/8]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 00:09:44) [GET]
+  Parameters: {"network_id"=>"115", "id"=>"8"}
+  [4;35;1mNetwork Load (0.1ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '115') LIMIT 1[0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #2 of app/views/articles/show.html.erb:
+1: <div class="header">
+2: 	<h2><%= @article.title %></h2>
+3: </div>
+
+    app/views/articles/show.html.erb:2
+
+Rendered rescues/_trace (52.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 00:11:00) [GET]
+  Parameters: {"network_id"=>"115", "id"=>"8"}
+  [4;35;1mNetwork Load (0.1ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '115') LIMIT 1[0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #2 of app/views/articles/show.html.erb:
+1: <div class="header">
+2: 	<h2><%= @article.title %></h2>
+3: </div>
+
+    app/views/articles/show.html.erb:2
+
+Rendered rescues/_trace (48.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 00:11:00) [GET]
+  Parameters: {"network_id"=>"115", "id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '115') LIMIT 1[0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #2 of app/views/articles/show.html.erb:
+1: <div class="header">
+2: 	<h2><%= @article.title %></h2>
+3: </div>
+
+    app/views/articles/show.html.erb:2
+
+Rendered rescues/_trace (121.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 00:11:01) [GET]
+  Parameters: {"network_id"=>"115", "id"=>"8"}
+  [4;35;1mNetwork Load (0.1ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '115') LIMIT 1[0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #2 of app/views/articles/show.html.erb:
+1: <div class="header">
+2: 	<h2><%= @article.title %></h2>
+3: </div>
+
+    app/views/articles/show.html.erb:2
+
+Rendered rescues/_trace (117.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 00:11:16) [GET]
+  Parameters: {"network_id"=>"115", "id"=>"8"}
+  [4;35;1mNetwork Load (0.1ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '115') LIMIT 1[0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #2 of app/views/articles/show.html.erb:
+1: <div class="header">
+2: 	<h2><%= @article.title %></h2>
+3: </div>
+
+    app/views/articles/show.html.erb:2
+
+Rendered rescues/_trace (119.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 00:11:39) [GET]
+  Parameters: {"network_id"=>"115", "id"=>"8"}
+  [4;35;1mNetwork Load (0.1ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '115') LIMIT 1[0m
+  [4;36;1mArticle Load (0.1ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #2 of app/views/articles/show.html.erb:
+1: <div class="header">
+2: 	<h2><%= @article.title %></h2>
+3: </div>
+
+    app/views/articles/show.html.erb:2
+
+Rendered rescues/_trace (119.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 00:11:40) [GET]
+  Parameters: {"network_id"=>"115", "id"=>"8"}
+  [4;35;1mNetwork Load (0.1ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '115') LIMIT 1[0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #2 of app/views/articles/show.html.erb:
+1: <div class="header">
+2: 	<h2><%= @article.title %></h2>
+3: </div>
+
+    app/views/articles/show.html.erb:2
+
+Rendered rescues/_trace (48.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 00:11:59) [GET]
+  Parameters: {"network_id"=>"115", "id"=>"8"}
+  [4;35;1mNetwork Load (0.1ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '115') LIMIT 1[0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #2 of app/views/articles/show.html.erb:
+1: <div class="header">
+2: 	<h2><%= @article.title %></h2>
+3: </div>
+
+    app/views/articles/show.html.erb:2
+
+Rendered rescues/_trace (51.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 00:12:00) [GET]
+  Parameters: {"network_id"=>"115", "id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '115') LIMIT 1[0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #2 of app/views/articles/show.html.erb:
+1: <div class="header">
+2: 	<h2><%= @article.title %></h2>
+3: </div>
+
+    app/views/articles/show.html.erb:2
+
+Rendered rescues/_trace (50.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mArticle Load (0.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 00:12:37) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"115"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '115') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered shared/_header (0.7ms)
+Completed in 84ms (View: 4, DB: 1) | 200 OK [http://localhost/networks/8/articles/115]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 00:13:16) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"115"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '115') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered shared/_header (0.7ms)
+Completed in 15ms (View: 3, DB: 0) | 200 OK [http://localhost/networks/8/articles/115]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 00:13:19) [GET]
+  Parameters: {"network_id"=>"115", "id"=>"8"}
+  [4;35;1mNetwork Load (0.1ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '115') LIMIT 1[0m
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #2 of app/views/articles/show.html.erb:
+1: <div class="header">
+2: 	<h2><%= @article.title %></h2>
+3: </div>
+
+    app/views/articles/show.html.erb:2
+
+Rendered rescues/_trace (115.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-29 00:13:24) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+
+ActionView::TemplateError (undefined local variable or method `network' for #<ActionView::Base:0x1033e3d08>) on line #22 of app/views/networks/show.html.erb:
+19: 			<span class="second-line points"> <%= article.total_likes %> points &nbsp; </span>
+20: 			<span class="second-line poster">by <%= article.poster %> &nbsp; </span> 
+21: 			<span class="second-line date"> <%= time_ago_in_words(article.created_at)%> ago &nbsp;</span>
+22: 			<span class="second-line comments"> <%= link_to article.total_comments.to_s + " comments", network_article_path(network, article) %>  &nbsp;</span>
+23: 			
+24: 		</div>
+25: 	<% end %>
+
+    app/views/networks/show.html.erb:22
+    app/views/networks/show.html.erb:13
+
+Rendered rescues/_trace (123.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-29 00:13:30) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+Rendered shared/_header (0.6ms)
+Completed in 29ms (View: 18, DB: 1) | 200 OK [http://localhost/networks/8]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 00:13:33) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"115"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '115') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered shared/_header (0.7ms)
+Completed in 15ms (View: 3, DB: 0) | 200 OK [http://localhost/networks/8/articles/115]
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-29 09:24:03) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.7ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing NetworksController#all_networks (for 127.0.0.1 at 2010-07-29 09:24:05) [GET]
+  [4;36;1mNetwork Load (0.5ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/all_networks
+Rendered shared/_header (0.4ms)
+Completed in 315ms (View: 6, DB: 1) | 200 OK [http://localhost/networks/all_networks]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-29 09:28:22) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+Rendered shared/_header (0.6ms)
+Completed in 91ms (View: 19, DB: 1) | 200 OK [http://localhost/networks/8]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 09:28:25) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered shared/_header (0.7ms)
+Completed in 15ms (View: 3, DB: 0) | 200 OK [http://localhost/networks/8/articles/114]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNetworks (20100725023812)
+Migrating to CreateUsers (20100725025640)
+Migrating to CreateMemberships (20100725184606)
+Migrating to CreateArticles (20100725225910)
+Migrating to AddCountsToUserTable (20100729011445)
+Migrating to CreateComments (20100729162923)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "total_likes" integer, "comment_id" integer, "article_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100729162923')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("memberships")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("networks")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_users_on_login')[0m
+  [4;35;1mNetwork Load (0.0ms)[0m   [0mSQLite3::SQLException: database schema has changed: SELECT * FROM "networks" [0m
+  [4;36;1mNetwork Load (0.5ms)[0m   [0;1mSELECT * FROM "networks" [0m
+  [4;35;1mNetwork Load (0.3ms)[0m   [0mSELECT * FROM "networks" LIMIT 1[0m
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;36;1mNetwork Load (0.5ms)[0m   [0;1mSELECT * FROM "networks" LIMIT 1[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".network_id = 8) LIMIT 1[0m
+  [4;36;1mNetwork Load (0.5ms)[0m   [0;1mSELECT * FROM "networks" LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".network_id = 8) LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mComment Create (0.8ms)[0m   [0mINSERT INTO "comments" ("created_at", "body", "total_likes", "updated_at", "article_id", "user_id", "comment_id") VALUES('2010-07-29 16:38:15', 'sdlkfj sdlkfjsdf lksdfjsj sljsdlfj', 3, '2010-07-29 16:38:15', 114, 9, NULL)[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" [0m
+  [4;36;1mNetwork Load (0.5ms)[0m   [0;1mSELECT * FROM "networks" LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".network_id = 8) LIMIT 1[0m
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mComment Create (0.7ms)[0m   [0;1mINSERT INTO "comments" ("created_at", "body", "total_likes", "updated_at", "article_id", "user_id", "comment_id") VALUES('2010-07-29 16:41:38', 'sldkfj sdflkaha alfjalfja;ldjadlsjalsdjsljsdljsdljsdljsdjflskdjlsdjflskjdslkjfljsljsdlf', 1, '2010-07-29 16:41:38', 114, 9, 2173424840)[0m
+  [4;36;1mNetwork Load (0.5ms)[0m   [0;1mSELECT * FROM "networks" LIMIT 1[0m
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles".network_id = 8) LIMIT 1[0m
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".comment_id = 1) [0m
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 1[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".comment_id = 1) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 2173424840) [0m
+  [4;36;1mComment Update (0.7ms)[0m   [0;1mUPDATE "comments" SET "updated_at" = '2010-07-29 16:45:17', "comment_id" = 1 WHERE "id" = 2[0m
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+  [4;36;1mArticle Load (0.5ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 1[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".comment_id = 1) [0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 09:52:04) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered shared/_header (0.7ms)
+Completed in 26ms (View: 7, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 09:52:26) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered shared/_header (0.7ms)
+Completed in 27ms (View: 8, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 09:52:39) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;35;1mNetwork Load (0.3ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered shared/_header (0.7ms)
+Completed in 27ms (View: 7, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 09:54:53) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered shared/_header (0.7ms)
+Completed in 27ms (View: 8, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 09:55:21) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered shared/_header (0.7ms)
+Completed in 25ms (View: 8, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-07-29 09:57:18) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+
+SyntaxError (/Users/jlaster/CODE/projects/Tulips/app/controllers/articles_controller.rb:15: syntax error, unexpected tAMPER
+    @top_level_comments = @comments.select(!&:comment)
+                                             ^
+/Users/jlaster/CODE/projects/Tulips/app/controllers/articles_controller.rb:68: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (35.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 09:57:29) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+
+NoMethodError (undefined method `comment' for []:Array):
+  facets (2.8.4) lib/core/facets/enumerable/filter.rb:20:in `filter'
+  facets (2.8.4) lib/core/facets/enumerable/filter.rb:19:in `each'
+  facets (2.8.4) lib/core/facets/enumerable/filter.rb:19:in `filter'
+  app/controllers/articles_controller.rb:15:in `show'
+
+Rendered rescues/_trace (43.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 09:58:23) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered shared/_header (0.7ms)
+Completed in 27ms (View: 9, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:01:18) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (Missing template articles/__comments.erb in view path app/views) on line #7 of app/views/articles/show.html.erb:
+4: 
+5: <div class="body">
+6: 
+7: <%= render :partial => "_comments", :collection => @top_level_comments %>
+8: 
+9: </div>
+
+    app/views/articles/show.html.erb:7
+
+Rendered rescues/_trace (118.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:02:03) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (Missing template articles/__comments.erb in view path app/views) on line #7 of app/views/articles/show.html.erb:
+4: 
+5: <div class="body">
+6: 
+7: <%= render :partial => "_comments", :collection => @top_level_comments %>
+8: 
+9: </div>
+
+    app/views/articles/show.html.erb:7
+
+Rendered rescues/_trace (119.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:02:23) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (Missing template articles/__comments.erb in view path app/views) on line #7 of app/views/articles/show.html.erb:
+4: 
+5: <div class="body">
+6: 
+7: <%= render :partial => "_comments", :collection => @top_level_comments %>
+8: 
+9: </div>
+
+    app/views/articles/show.html.erb:7
+
+Rendered rescues/_trace (120.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:02:24) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (Missing template articles/__comments.erb in view path app/views) on line #7 of app/views/articles/show.html.erb:
+4: 
+5: <div class="body">
+6: 
+7: <%= render :partial => "_comments", :collection => @top_level_comments %>
+8: 
+9: </div>
+
+    app/views/articles/show.html.erb:7
+
+Rendered rescues/_trace (120.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:02:51) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (Missing template articles/__comments.erb in view path app/views) on line #7 of app/views/articles/show.html.erb:
+4: 
+5: <div class="body">
+6: 
+7: <%= render :partial => "_comments", :collection => @top_level_comments %>
+8: 
+9: </div>
+
+    app/views/articles/show.html.erb:7
+
+Rendered rescues/_trace (120.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:03:47) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (Missing template articles/__comments.erb in view path app/views) on line #7 of app/views/articles/show.html.erb:
+4: 
+5: <div class="body">
+6: 
+7: <%= render :partial => "articles/_comments", :collection => @top_level_comments %>
+8: 
+9: </div>
+
+    app/views/articles/show.html.erb:7
+
+Rendered rescues/_trace (120.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:03:48) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (Missing template articles/__comments.erb in view path app/views) on line #7 of app/views/articles/show.html.erb:
+4: 
+5: <div class="body">
+6: 
+7: <%= render :partial => "articles/_comments", :collection => @top_level_comments %>
+8: 
+9: </div>
+
+    app/views/articles/show.html.erb:7
+
+Rendered rescues/_trace (120.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:03:57) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (Missing template /articles/__comments.erb in view path app/views) on line #7 of app/views/articles/show.html.erb:
+4: 
+5: <div class="body">
+6: 
+7: <%= render :partial => "/articles/_comments", :collection => @top_level_comments %>
+8: 
+9: </div>
+
+    app/views/articles/show.html.erb:7
+
+Rendered rescues/_trace (54.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:04:02) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (Missing template ~/articles/__comments.erb in view path app/views) on line #7 of app/views/articles/show.html.erb:
+4: 
+5: <div class="body">
+6: 
+7: <%= render :partial => "~/articles/_comments", :collection => @top_level_comments %>
+8: 
+9: </div>
+
+    app/views/articles/show.html.erb:7
+
+Rendered rescues/_trace (52.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:05:21) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered articles/_comments (0.5ms)
+Rendered shared/_header (0.9ms)
+Completed in 102ms (View: 13, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:06:13) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered articles/_comments (1.0ms)
+Rendered shared/_header (0.7ms)
+Completed in 31ms (View: 13, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:06:14) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered articles/_comments (0.3ms)
+Rendered shared/_header (0.7ms)
+Completed in 90ms (View: 4, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:06:14) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered articles/_comments (0.3ms)
+Rendered shared/_header (0.7ms)
+Completed in 21ms (View: 4, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:06:43) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered articles/_comments (0.3ms)
+Rendered shared/_header (0.7ms)
+Completed in 88ms (View: 8, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:07:58) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered articles/_comments (0.7ms)
+Rendered shared/_header (0.7ms)
+Completed in 26ms (View: 8, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:08:41) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered articles/_comments (0.5ms)
+Rendered shared/_header (0.7ms)
+Completed in 95ms (View: 12, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:08:42) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered articles/_comments (0.1ms)
+Rendered shared/_header (0.7ms)
+Completed in 22ms (View: 4, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:09:05) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #1 of app/views/articles/_comments.html.erb:
+1: <% @comments.each do |comment| %>
+2: 	
+3: 	<p><%= comment.body %></p>
+4: 
+
+    app/views/articles/_comments.html.erb:1
+    app/views/articles/show.html.erb:7
+
+Rendered rescues/_trace (61.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:09:16) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;36;1mNetwork Load (0.2ms)[0m   [0;1mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `body' for :comments:Symbol) on line #3 of app/views/articles/_comments.html.erb:
+1: <% comments.each do |comment| %>
+2: 	
+3: 	<p><%= comment.body %></p>
+4: 
+5: <% end %>
+
+    app/views/articles/_comments.html.erb:3
+    app/views/articles/_comments.html.erb:1:in `each'
+    app/views/articles/_comments.html.erb:1
+    app/views/articles/show.html.erb:7
+
+Rendered rescues/_trace (128.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing NetworksController#index (for 127.0.0.1 at 2010-07-29 10:59:36) [GET]
+Rendering template within layouts/application
+Rendering networks/index
+Rendered shared/_header (0.7ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing NetworksController#all_networks (for 127.0.0.1 at 2010-07-29 10:59:37) [GET]
+  [4;36;1mNetwork Load (0.5ms)[0m   [0;1mSELECT * FROM "networks" [0m
+Rendering template within layouts/application
+Rendering networks/all_networks
+Rendered shared/_header (0.4ms)
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/networks/all_networks]
+
+
+Processing NetworksController#show (for 127.0.0.1 at 2010-07-29 10:59:38) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering networks/show
+  [4;36;1mArticle Load (0.4ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles".network_id = 8) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+Rendered shared/_header (0.7ms)
+Completed in 99ms (View: 87, DB: 1) | 200 OK [http://localhost/networks/8]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 10:59:48) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `body' for :comments:Symbol) on line #3 of app/views/articles/_comments.html.erb:
+1: <% comments.each do |comment| %>
+2: 	
+3: 	<p><%= comment.body %></p>
+4: 
+5: <% end %>
+
+    app/views/articles/_comments.html.erb:3
+    app/views/articles/_comments.html.erb:1:in `each'
+    app/views/articles/_comments.html.erb:1
+    app/views/articles/show.html.erb:7
+
+Rendered rescues/_trace (132.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 11:01:30) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered articles/_comments (0.3ms)
+Rendered shared/_header (0.7ms)
+Completed in 27ms (View: 8, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 11:01:51) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+Rendered articles/_comments (0.5ms)
+Rendered shared/_header (0.8ms)
+Completed in 28ms (View: 8, DB: 1) | 200 OK [http://localhost/networks/8/articles/114]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 11:03:53) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `contents' for #<Comment:0x103450110>) on line #5 of app/views/articles/_comments.html.erb:
+2: 	
+3: 	<p><%= comment.id.to_s + " - " + comment.body %></p>
+4: 	
+5: 	<% if comment.contents %>
+6: 		<%= render :partial => "comments", locals => {:children => comment.comments} %>
+7: 	<% end %>
+8: 	
+
+    app/views/articles/_comments.html.erb:5
+    app/views/articles/_comments.html.erb:1:in `each'
+    app/views/articles/_comments.html.erb:1
+    app/views/articles/show.html.erb:7
+
+Rendered rescues/_trace (125.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 11:04:00) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+
+ActionView::TemplateError (undefined local variable or method `locals' for #<ActionView::Base:0x103281cd0>) on line #6 of app/views/articles/_comments.html.erb:
+3: 	<p><%= comment.id.to_s + " - " + comment.body %></p>
+4: 	
+5: 	<% if comment.comments %>
+6: 		<%= render :partial => "comments", locals => {:children => comment.comments} %>
+7: 	<% end %>
+8: 	
+9: <% end %>
+
+    app/views/articles/_comments.html.erb:6
+    app/views/articles/_comments.html.erb:1:in `each'
+    app/views/articles/_comments.html.erb:1
+    app/views/articles/show.html.erb:7
+
+Rendered rescues/_trace (59.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2010-07-29 11:04:07) [GET]
+  Parameters: {"network_id"=>"8", "id"=>"114"}
+  [4;35;1mNetwork Load (0.2ms)[0m   [0mSELECT * FROM "networks" WHERE ("networks"."id" = '8') LIMIT 1[0m
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = '114') LIMIT 1[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 114) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering articles/show
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".comment_id = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".comment_id = 2) [0m
+Rendered articles/_comments (0.6ms)
+Rendered articles/_comments (1.8ms)
+Rendered articles/_comments (2.8ms)
+Rendered shared/_header (0.7ms)
+Completed in 102ms (View: 10, DB: 2) | 200 OK [http://localhost/networks/8/articles/114]

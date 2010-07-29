@@ -19,7 +19,7 @@
 			<span class="second-line points"> <%= article.total_likes %> points &nbsp; </span>
 			<span class="second-line poster">by <%= article.poster %> &nbsp; </span> 
 			<span class="second-line date"> <%= time_ago_in_words(article.created_at)%> ago &nbsp;</span>
-			<span class="second-line comments"> <%= link_to article.total_comments.to_s + " comments", '#' %>  &nbsp;</span>
+			<span class="second-line comments"> <%= link_to article.total_comments.to_s + " comments", network_article_path(@network, article) %>  &nbsp;</span>
 			
 		</div>
 	<% end %>
@@ -27,5 +27,5 @@
 </div>
 
 <div class="footer">
-	<%= link_to '&larr; back to networks', networks_networks_path %>
+	<%= link_to '&larr; back to networks', all_networks_networks_path %>
 </div>
