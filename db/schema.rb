@@ -9,18 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100725225910) do
+ActiveRecord::Schema.define(:version => 20100729011445) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
     t.string   "url"
     t.string   "source"
     t.text     "description"
-    t.integer  "rank"
+    t.integer  "total_likes"
     t.integer  "user_id"
     t.integer  "network_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "total_comments"
   end
 
   create_table "memberships", :force => true do |t|

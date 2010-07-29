@@ -12,14 +12,14 @@
 	<div id="articles">
 	<% @articles.each do |article| %>
 		<div class="article">
-			<span class="title"> <%= link_to article.title, "http://#{article.url}" %> </span>
+			<span class="title"> <%= link_to article.title, article.url %> </span>
 			<span class="source">(<%= article.source %>)</span> <br />
 			
 			<span class="second-line like"><%= link_to 'like', '#'%> &nbsp; </span> 
-			<span class="second-line points"> <%=  (rand * 100).round %> points &nbsp; </span>
+			<span class="second-line points"> <%= article.total_likes %> points &nbsp; </span>
 			<span class="second-line poster">by <%= article.poster %> &nbsp; </span> 
 			<span class="second-line date"> <%= time_ago_in_words(article.created_at)%> ago &nbsp;</span>
-			<span class="second-line comments"> <%= link_to (rand * 50).round.to_s + " comments", '#' %>  &nbsp;</span>
+			<span class="second-line comments"> <%= link_to article.total_comments.to_s + " comments", '#' %>  &nbsp;</span>
 			
 		</div>
 	<% end %>

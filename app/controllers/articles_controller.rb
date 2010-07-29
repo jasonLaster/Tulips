@@ -33,6 +33,8 @@ class ArticlesController < ApplicationController
     @article = Article.new(params[:article])
     @article.network_id = params[:network_id]
     @article.user_id = current_user.id
+    @article.total_likes = (rand*100).round
+    @article.total_comments = (rand*50).round 
     
     if @article.save
       flash[:notice] = 'Article was successfully created.'
