@@ -21,14 +21,15 @@ SITE_URL  = "localhost:3000"
 
 # Mail config
 config.action_mailer.raise_delivery_errors = true
-config.action_mailer.default_url_options = { :host => "localhost:3000" }
+config.action_mailer.default_url_options = { :host => SITE_URL }
+
 config.action_mailer.delivery_method = :smtp # change to SMTP to actually send mail in the host environment
 config.action_mailer.smtp_settings = {
   :enable_starttls_auto => true,
   :address => "smtp.gmail.com",
   :port => 587,
-  :domain => "jumppost.com",
+  :domain => "somethingRemarkable.com",
   :authentication => :plain,
-  :user_name => "mailer@jumppost.com",
-  :password => "royale!"
+  :user_name => "jason.laster.11@gmail.com",
+  :password => "joel1024"
 }
