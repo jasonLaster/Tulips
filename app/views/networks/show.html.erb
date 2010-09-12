@@ -1,10 +1,28 @@
 <div class="header">
 	<h2><%= @network.name %></h2> 
 	<ul class="links">
-		<li><%= link_to 'new article', new_network_article_path(@network) %></li>
+		
+		<% if current_user  %>
+			
+			<% if current_user.member?(@network) %>
+		
+				<li><%= link_to 'new article', new_network_article_path(@network) %></li>
+			
+			<% if current_user.admin?(@network) %>
+				<li><%= link_to 'Admins Page', admin_networks_path(:id => @network.id) %></li>
+			<% end %>
+			
+			<% else %>
+				<%= link_to 'Join', join_path(:network_id => @network.id, :user_id => current_user.id) %>
+			<% end %>
+			
+		<% end %>
 	</ul>
 	<div style="clear:both"></div>
 </div>
+
+<p>
+</p>
 
 
 

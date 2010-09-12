@@ -1,5 +1,5 @@
 body {background-color:#0072bb; font:90% helvetica, arial, sans-serif; color:#000;}
-body, form, h1, h2, h3, h4, h5, h6 {margin:0; padding:0}
+body, form, p, h1, h2, h3, h4, h5, h6 {margin:0; padding:0}
 a, a:link, a:visited {text-decoration:none; color:#0066cc; cursor:pointer; outline-style:none}
 a:hover, a:focus {text-decoration:underline; color:#0066cc;}
 a img {border:none;}
@@ -12,29 +12,35 @@ body                {padding-bottom:200px;}
 #header ul#nav      {float: right; list-style:none; }
 #header ul#nav li   {float:left; margin-right:15px;}
 
+
+/* MAIN SECTION */
+
 #main               {position:relative; width:1024px; min-height:400px; margin:20px auto 0px auto; background-color:#d6dde5;}
 
-.header             {height:50px; padding:0px 10px; background-color:#004681;}
-.header h2          {float:left; line-height:50px;  color:#d6dde5;}
-.header a           {color:#d6dde5;}
-.header ul          {float:right; height:50px; list-style:none; padding:0px; margin:0px;}
-.header li          {float:left; line-height:50px;}
+#main .header             {height:50px; padding:0px 10px; background-color:#004681;}
+#main .header h2          {float:left; line-height:50px;  color:#d6dde5;}
+#main .header a           {color:#d6dde5;}
+#main .header ul          {float:right; line-height:50px; list-style:none; padding:0px; margin:0px;}
+#main .header li          {float:left; line-height:50px; margin-left:20px;}
 
-.body               {width:100%; padding:20px 0px 40px 20px;}
-
-#main .footer             {width:100%; height:30px; position:absolute; bottom:0px; background-color:#c3ced5;}
-#main .footer a           {padding:10px;line-height:30px;}
-
-#main .body table.networks                {}
-#main .body table.networks tr             {padding:5px 0px; border:1px solid black;}
-#main .body table.networks td.title       {width:800px;}
-#main .body table.networks td.links div   {float:right;}
+#main .body                           {padding:20px 20px 40px 20px;}
+#main .body .networks                 {}
+#main .body .network                  {padding:15px 5px 5px 5px; border-bottom:1px solid #ccc;}
+#main .body .network span.title a     {font-size:18px; color:#004681;}
+#main .body .network span.description {font-size:14px; color:#565656;}
 
 #main .body .text     {margin:30px 60px; width:700px;}
 #main .body .text h2  {font-size:25px; line-height:40px; color:#004681; margin:0px; padding:0px;}
 #main .body .text p   {font-size:15px; line-height:20px; color:#333; padding:0px; margin-top:20px;}
 
 .body ul        {list-style:none;}
+
+
+
+
+#main .footer             {width:100%; height:30px; position:absolute; bottom:0px; background-color:#c3ced5;}
+#main .footer a           {padding:10px;line-height:30px;}
+
 
 
 #articles {}

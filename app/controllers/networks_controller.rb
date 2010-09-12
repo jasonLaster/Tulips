@@ -6,14 +6,19 @@ class NetworksController < ApplicationController
   def all_networks
     @networks = Network.all
   end
-
+  
+  def admin
+    @network = Network.find_by_id(params[:id])
+    puts @network.inspect
+  end
+  
   def show
     @network = Network.find_by_id(params[:id])
     @articles = @network.articles
   end
 
   def members
-    @network = Network.find(params[:id])
+    @network = Network.find_by_id(params[:id])
     @members = @network.users
   end
 

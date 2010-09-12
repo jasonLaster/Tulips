@@ -37,7 +37,16 @@ class User < ActiveRecord::Base
   def member? (network)
     self.networks.include?(network)
   end
-
+  
+  def admin? (network)
+    membership = Membership.find(:first, :conditions => ["network_id = :network_id and user_id = :user_id", {:network_id => network.id, :user_id => self.id}])
+    membership ? membership.admin : false
+  end
+  
+  def self.active_users
+    User.all.select(&:activated_at)
+  end
+    
   # Activates the user in the database.
   def activate!
     @activated = true

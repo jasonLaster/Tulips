@@ -1,0 +1,15 @@
+<div class="header">
+	<h2><%= @network.name %></h2> 
+</div>
+
+<div class="body">
+	<ul>
+		<li><%= link_to 'Members', members_networks_path(:id => @network.id) %> </li>
+		<li><%= link_to 'Edit', edit_network_path(@network) %> </li>
+		<li><%= link_to 'Destroy', @network, :confirm => 'Are you sure?', :method => :delete %> </li>
+	<ul>
+</div>
+
+<div class="footer">
+	&nbsp;
+</div>
